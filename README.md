@@ -16,6 +16,9 @@ UPLOAD FILES TO IPFS Using PINATA:
 
 FUNCTION: 
 
+
+```shell
+
   async function sendFileToIPFS (e) {
         const file = e.target.files[0];
         const formData = new FormData();
@@ -40,13 +43,17 @@ FUNCTION:
         const ImgHash = `ipfs://${resFile.data.IpfsHash}`;
         console.log(ImgHash);
       }
- 
+```
+
  Attach to your html upload button :
+ 
+ ```shell
  
   <input
     className="btn btn-secondary"
     type="file"
     name="Asset"
     onChange={sendFileToIPFS}/>
- 
+    
+ ```
  
