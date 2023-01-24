@@ -21,16 +21,21 @@ FUNCTION:
 ```shell
 
   async function sendFileToIPFS (e) {
+  
         const file = e.target.files[0];
         const formData = new FormData();
+        formData.append("file", file);
+        
         const key = 'Your Pinata Api Key';
         const secret = 'Your Pinata Api Secret Key'
         const url = "https://api.pinata.cloud/pinning/pinFileToIPFS"
-        formData.append("file", file);
+        
+       
         const opts = JSON.stringify({
           cidVersion: 0,
         })
         formData.append('pinataOptions', opts);
+        
         const options = {
           maxBodyLength: "Infinity",
           headers: {
