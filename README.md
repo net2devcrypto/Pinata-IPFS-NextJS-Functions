@@ -2,13 +2,14 @@
 Simple Pinata IPFS Functions for Next JS to Upload Files.
 
 
-<h5> Use in your NextJS App: </h5>
+<h2> Use in your NextJS App: </h2>
 
 
 Dependencies:
 
+```shell
 npm i axios
-
+```
 
 UPLOAD FILES TO IPFS Using PINATA:
 
